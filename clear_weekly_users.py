@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sqlite3
 
@@ -6,6 +8,7 @@ garden_db_path = os.path.join(game_dir, 'sqlite/garden_db.sqlite')
 conn = sqlite3.connect(garden_db_path)
 c = conn.cursor()
 c.execute("DELETE FROM visitors")
-print "Cleared weekly users"
+print("Cleared weekly users")
 conn.commit()
 conn.close()
+
